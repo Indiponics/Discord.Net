@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Discord.Net.Commands\Command.cs">
+      <Link>Command.cs</Link>
+    </Compile>
+    <Compile Include="..\Discord.Net.Commands\CommandBuilder.cs">
+      <Link>CommandBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\Discord.Net.Commands\CommandErrorEventArgs.cs">
+      <Link>CommandErrorEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\Discord.Net.Commands\CommandEventArgs.cs">
+      <Link>CommandEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\Discord.Net.Commands\CommandExtensions.cs">
+      <Link>CommandExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Discord.Net.Commands\CommandMap.cs">
+      <Link>CommandMap.cs</Link>
+    </Compile>
+    <Compile Include="..\Discord.Net.Commands\CommandParameter.cs">
+      <Link>CommandParameter.cs</Link>
+    </Compile>
+    <Compile Include="..\Discord.Net.Commands\CommandParser.cs">
+      <Link>CommandParser.cs</Link>
+    </Compile>
+    <Compile Include="..\Discord.Net.Commands\CommandService.cs">
+      <Link>CommandService.cs</Link>
+    </Compile>
+    <Compile Include="..\Discord.Net.Commands\CommandServiceConfig.cs">
+      <Link>CommandServiceConfig.cs</Link>
+    </Compile>
+    <Compile Include="..\Discord.Net.Commands\HelpMode.cs">
+      <Link>HelpMode.cs</Link>
+    </Compile>
+    <Compile Include="..\Discord.Net.Commands\Permissions\GenericPermissionChecker.cs">
+      <Link>Permissions\GenericPermissionChecker.cs</Link>
+    </Compile>
+    <Compile Include="..\Discord.Net.Commands\Permissions\IPermissionChecker.cs">
+      <Link>Permissions\IPermissionChecker.cs</Link>
+    </Compile>
+    <Compile Include="..\Discord.Net.Commands\Permissions\Levels\PermissionLevelChecker.cs">
+      <Link>Permissions\Levels\PermissionLevelChecker.cs</Link>
+    </Compile>
+    <Compile Include="..\Discord.Net.Commands\Permissions\Levels\PermissionLevelExtensions.cs">
+      <Link>Permissions\Levels\PermissionLevelExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Discord.Net.Commands\Permissions\Levels\PermissionLevelService.cs">
+      <Link>Permissions\Levels\PermissionLevelService.cs</Link>
+    </Compile>
+    <Compile Include="..\Discord.Net.Commands\Permissions\Userlist\BlacklistChecker.cs">
+      <Link>Permissions\Users\BlacklistChecker.cs</Link>
+    </Compile>
+    <Compile Include="..\Discord.Net.Commands\Permissions\Userlist\BlacklistExtensions.cs">
+      <Link>Permissions\Users\BlacklistExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Discord.Net.Commands\Permissions\Userlist\BlacklistService.cs">
+      <Link>Permissions\Users\BlacklistService.cs</Link>
+    </Compile>
+    <Compile Include="..\Discord.Net.Commands\Permissions\Userlist\UserlistService.cs">
+      <Link>Permissions\Users\UserlistService.cs</Link>
+    </Compile>
+    <Compile Include="..\Discord.Net.Commands\Permissions\Userlist\WhitelistChecker.cs">
+      <Link>Permissions\Users\WhitelistChecker.cs</Link>
+    </Compile>
+    <Compile Include="..\Discord.Net.Commands\Permissions\Userlist\WhitelistExtensions.cs">
+      <Link>Permissions\Users\WhitelistExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Discord.Net.Commands\Permissions\Userlist\WhitelistService.cs">
+      <Link>Permissions\Users\WhitelistService.cs</Link>
+    </Compile>
+    <Compile Include="..\Discord.Net.Commands\Permissions\Visibility\PrivateChecker.cs">
+      <Link>Permissions\Visibility\PrivateChecker.cs</Link>
+    </Compile>
+    <Compile Include="..\Discord.Net.Commands\Permissions\Visibility\PrivateExtensions.cs">
+      <Link>Permissions\Visibility\PrivateExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Discord.Net.Commands\Permissions\Visibility\PublicChecker.cs">
+      <Link>Permissions\Visibility\PublicChecker.cs</Link>
+    </Compile>
+    <Compile Include="..\Discord.Net.Commands\Permissions\Visibility\PublicExtensions.cs">
+      <Link>Permissions\Visibility\PublicExtensions.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="project.lock.json">
+      <DependentUpon>project.json</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Discord.Net.Pcl.Net45\Discord.Net.Pcl.csproj">
+      <Project>{772f3e93-d42f-46cf-aa1d-99165f35167f}</Project>
+      <Name>Discord.Net.Pcl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="..\Discord.Net.Shared\Discord.Net.Shared.projitems" Label="Shared" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7CC071F6-5B12-4047-A0B9-A95C2EFBC65B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Discord.Commands</RootNamespace>
+    <AssemblyName>Discord.Net.Commands</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\..\packages\Xamarin.Forms.2.3.1.114\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.1.114\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

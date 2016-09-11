@@ -1,0 +1,11 @@
+﻿{
+  "supports": {},
+  "dependencies": {
+    "Newtonsoft.Json": "9.0.1",
+    "Nito.AsyncEx": "3.0.1",
+    "PCLCrypto": "2.0.147"
+  },
+  "frameworks": {
+    ".NETPortable,Version=v4.5,Profile=Profile111": {}
+  }
+}
